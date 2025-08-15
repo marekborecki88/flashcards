@@ -24,7 +24,7 @@ A modern web application designed to help users memorize and retain information 
 2. Create a `.env` file with your database credentials
 3. Run `docker-compose up -d` to start all services
 4. Access the application at `http://localhost:8000/api`
-5. Access pgAdmin at `http://localhost:5050` for database management
+5. Access pgAdmin at `http://localhost:5050` for database management (when you will connect to db via pgadmin remember that localhost in docker compose has different meaning, for pgadmin localhost means its own adress, so you need to write postgress service name. In this case it will be "db")
 
 ## Development
 
