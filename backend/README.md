@@ -47,3 +47,23 @@ docker-compose up -d --build backend
 ```
 
 **Note**: The `--build` flag is useful when you've made changes to the backend code and need to rebuild the Docker image.
+
+## API overview
+Base URL: http://localhost:8000/api
+
+- GET /health → health status
+- POST /users {username,email,password} → create user
+- GET /users/{id} → get user
+- GET /courses → list public courses
+- POST /courses {name,description,taughtLanguage,learningLanguage,isPublic,createdByUserId} → create course
+- GET /courses/{id} → get course
+- PUT /courses/{id} {name?,description?,taughtLanguage?,learningLanguage?,isPublic?} → update course
+- DELETE /courses/{id} → delete course
+- GET /courses/{courseId}/levels → list levels of a course
+- POST /courses/{courseId}/levels {courseId,name,description?,orderPosition?} → create level
+- GET /levels/{id} → get level with flashcards summary
+- GET /levels/{levelId}/flashcards → list flashcards for level
+- POST /levels/{levelId}/flashcards {levelId,sideA,sideB,imageUrl?,audioMp3Url?,exampleSentence?,orderPosition?} → create flashcard
+- GET /flashcards/{id} → get flashcard
+- PUT /flashcards/{id} {sideA?,sideB?,imageUrl?,audioMp3Url?,exampleSentence?,orderPosition?} → update flashcard
+- DELETE /flashcards/{id} → delete flashcard
