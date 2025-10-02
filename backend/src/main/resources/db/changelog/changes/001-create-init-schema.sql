@@ -111,11 +111,3 @@ CREATE TABLE IF NOT EXISTS user_progress (
 );
 CREATE INDEX IF NOT EXISTS idx_up_user_id ON user_progress(user_id);
 CREATE INDEX IF NOT EXISTS idx_up_flashcard_id ON user_progress(flashcard_id);
-
---rollback
-DROP TABLE IF EXISTS user_progress;
-DROP TABLE IF EXISTS user_course_access;
-DROP TABLE IF EXISTS flashcards;
-DROP TABLE IF EXISTS levels;
-DROP TABLE IF EXISTS courses;
-DROP TABLE IF EXISTS users;
