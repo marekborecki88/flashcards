@@ -5,7 +5,7 @@ server:
 
 spring:
   datasource:
-    url: jdbc:postgresql://db:5432/flashcards
+    url: jdbc:postgresql://localhost:5432/flashcards
     username: postgres
     password: postgres
     driver-class-name: org.postgresql.Driver
