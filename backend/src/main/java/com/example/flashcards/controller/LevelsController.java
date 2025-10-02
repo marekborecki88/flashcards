@@ -33,7 +33,7 @@ public class LevelsController {
     }
 
     @PostMapping("/{levelId}/flashcards")
-    public ResponseEntity<FlashcardDtos.Response> createFlashcard(@PathVariable Long levelId, @RequestBody @Valid FlashcardDtos.Crflashcardseate req) {
+    public ResponseEntity<FlashcardDtos.Response> createFlashcard(@PathVariable Long levelId, @RequestBody @Valid FlashcardDtos.Create req) {
         if (!levelId.equals(req.levelId())) {
             throw new IllegalArgumentException("Path levelId and body.levelId must match");
         }
